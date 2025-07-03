@@ -32,7 +32,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Task Management App',
+      title: 'Aurora- Intelligence in every voice',
       description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop',
       technologies: ['React', 'TypeScript', 'Socket.io', 'Express', 'PostgreSQL'],
