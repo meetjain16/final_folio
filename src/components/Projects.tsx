@@ -22,7 +22,7 @@ const Projects = () => {
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
+      description: 'A full-stack Salon platform built with React, Node.js, and MongoDB. Features include user authentication,Shop mangement,Appointment booking.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
       category: 'fullstack',
