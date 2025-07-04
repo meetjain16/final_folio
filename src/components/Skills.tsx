@@ -38,28 +38,28 @@ const Skills = () => {
         { name: 'PostgreSQL', level: 70, color: '#336791' },
       ]
     },
-    {
-      title: 'Design & UI/UX',
-      icon: <Palette className="text-purple-500" size={24} />,
-      skills: [
-        { name: 'Figma', level: 85, color: '#F24E1E' },
-        { name: 'Adobe XD', level: 75, color: '#FF61F6' },
-        { name: 'Photoshop', level: 70, color: '#31A8FF' },
-        { name: 'Illustrator', level: 65, color: '#FF9A00' },
-        { name: 'User Research', level: 80, color: '#6366F1' },
-      ]
-    },
-    {
-      title: 'DevOps & Tools',
-      icon: <Cloud className="text-orange-500" size={24} />,
-      skills: [
-        { name: 'Git', level: 80, color: '#F05032' },
-        { name: 'Docker', level: 20, color: '#2496ED' },
-        { name: 'AWS', level: 20, color: '#FF9900' },
-        { name: 'CI/CD', level: 20, color: '#FF6B6B' },
-        { name: 'Linux', level: 20, color: '#FCC624' },
-      ]
-    }
+    // {
+    //   title: 'Design & UI/UX',
+    //   icon: <Palette className="text-purple-500" size={24} />,
+    //   skills: [
+    //     { name: 'Figma', level: 85, color: '#F24E1E' },
+    //     { name: 'Adobe XD', level: 75, color: '#FF61F6' },
+    //     { name: 'Photoshop', level: 70, color: '#31A8FF' },
+    //     { name: 'Illustrator', level: 65, color: '#FF9A00' },
+    //     { name: 'User Research', level: 80, color: '#6366F1' },
+    //   ]
+    // },
+    // {
+    //   title: 'DevOps & Tools',
+    //   icon: <Cloud className="text-orange-500" size={24} />,
+    //   skills: [
+    //     { name: 'Git', level: 80, color: '#F05032' },
+    //     { name: 'Docker', level: 20, color: '#2496ED' },
+    //     { name: 'AWS', level: 20, color: '#FF9900' },
+    //     { name: 'CI/CD', level: 20, color: '#FF6B6B' },
+    //     { name: 'Linux', level: 20, color: '#FCC624' },
+    //   ]
+    // }
   ]
 
   return (
@@ -156,9 +156,9 @@ const Skills = () => {
           <h3 className="text-2xl font-bold text-center mb-8">Other Skills & Tools</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              'Redux', 'Next.js', 'GraphQL', 'REST APIs', 'Jest', 'Webpack',
+              'Redux', 'Next.js', 'GraphQL', 'REST APIs', 'Discord', 'Webpack',
               'Vite', 'NPM', 'Yarn', 'VS Code', 'Postman', 'Swagger',
-              'Agile', 'Scrum', 'JIRA', 'Confluence', 'Slack', 'Discord'
+              // 'Agile', 'Scrum', 'JIRA', 'Confluence', 'Slack', 'Jest'
             ].map((skill, index) => (
               <motion.div
                 key={skill}

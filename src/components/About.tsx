@@ -5,16 +5,16 @@ import FloatingElements from './FloatingElements'
 const About = () => {
   const experiences = [
     {
-      year: '2023 - Present',
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Company',
-      description: 'Leading development of scalable web applications using modern technologies.'
+      year: 'November 2024',
+      title: 'INTERN -Front End App Developer',
+      company: 'BYTEDOCKER',
+      description: 'Collaborated with a team to develop and implement key features, including the Feed Screen, Posts Screen,Profile Screen for the Inovact Social mobile app.'
     },
     {
-      year: '2021 - 2023',
-      title: 'Frontend Developer',
-      company: 'Startup Inc',
-      description: 'Built responsive user interfaces and improved user experience across multiple projects.'
+      year: 'March 2023-Dec 2023',
+      title: 'INTERN -Front End App Developer',
+      company: 'SKILLFINDR',
+      description: 'Collaborated with a team to develop and implement key features, including the Profile Screen, Menu Screen, Achievements Screen, and Filters Screen for the SkillFindr mobile app.'
     },
     // {
     //   year: '2020 - 2021',

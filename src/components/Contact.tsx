@@ -48,7 +48,7 @@ const Contact = () => {
     {
       icon: <Github size={20} />,
       name: 'GitHub',
-      url: 'https://github.com/yourusername'
+      url: 'https://github.com/meetjain16'
     },
     {
       icon: <Linkedin size={20} />,

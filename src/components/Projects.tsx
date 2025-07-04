@@ -43,8 +43,8 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard that displays current weather conditions, forecasts, and interactive maps using weather APIs.',
+      title: 'Dynamic Prizing of Ride ML model',
+      description: 'Built a ML model to predict the Taxi Fare Of the ride ,used a dataset from Kaggle consisting various parameters in it.',
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=500&h=300&fit=crop',
       technologies: ['React', 'TypeScript', 'Chart.js', 'OpenWeather API'],
       category: 'frontend',
