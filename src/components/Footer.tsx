@@ -26,12 +26,13 @@ const Footer = () => {
       ]
     },
     {
-      title: 'Services',
+      title: 'Passion',
       links: [
         { name: 'Web Development', href: '#' },
         { name: 'UI/UX Design', href: '#' },
         { name: 'Mobile Apps', href: '#' },
-        { name: 'Consulting', href: '#' }
+        { name: 'Artificial Intelligence', href: '#' },
+        { name: 'Machine Learning', href: '#' }
       ]
     },
     {
@@ -40,7 +41,7 @@ const Footer = () => {
         { name: 'Blog', href: '#' },
         { name: 'Portfolio', href: '#' },
         { name: 'Resume', href: '#' },
-        { name: 'GitHub', href: 'https://github.com/yourusername' }
+        { name: 'GitHub', href: 'https://github.com/meetjain16' }
       ]
     }
   ]
@@ -78,8 +79,10 @@ const Footer = () => {
   return (
     <footer className={`bg-dark-900 text-white transition-all duration-300 ${shrink ? 'py-2' : ''}`}>
       <div className={`container-custom ${shrink ? 'py-4' : 'section-padding'} transition-all duration-300`}>
+
         {/* Main Footer Content */}
         <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 ${shrink ? 'mb-4' : ''}`}>
+        
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -128,11 +131,14 @@ const Footer = () => {
                   <motion.li
                     key={link.name}
                     initial={{ opacity: 0, x: -10 }}
+                    
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: (sectionIndex * 0.1) + (linkIndex * 0.05) }}
                     viewport={{ once: true }}
                   >
                     <a
+                    target="_blank" 
+                    rel="noopener noreferrer"
                       href={link.href}
                       onClick={(e) => {
                         if (link.href.startsWith('#')) {

@@ -85,7 +85,7 @@ const Hero = () => {
       />
 
       {/* Particle Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.1)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.2)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
       
       {/* Animated Lines */}
       <motion.div

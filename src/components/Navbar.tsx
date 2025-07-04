@@ -37,12 +37,16 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
   }
 
   return (
+    
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-white/20 dark:bg-dark-900/80 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     } ${shrink ? 'py-1' : 'py-4'}`}>
       <div className={`container-custom transition-all duration-300 ${shrink ? 'py-1' : 'py-3'}`}>
+
+           {/* Particle Grid */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.2)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className={`font-bold gradient-text transition-all duration-300 ${shrink ? 'text-lg' : 'text-2xl'}`}>Portfolio</div>

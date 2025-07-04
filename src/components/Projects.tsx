@@ -70,6 +70,8 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-gray-50 dark:bg-dark-800 relative overflow-hidden">
       {/* Background Animations */}
       <FloatingElements />
+         {/* Particle Grid */}
+         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.2)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
       
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-transparent to-pink-50/30 dark:from-purple-900/20 dark:via-transparent dark:to-pink-900/20"></div>

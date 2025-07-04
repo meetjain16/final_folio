@@ -30,7 +30,8 @@ const FloatingElements = () => {
         }}
         className="absolute top-1/3 right-1/4 w-3 h-3 bg-purple-400/30 dark:bg-purple-600/30 rounded-full"
       />
-      
+         {/* Particle Grid */}
+         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.2)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
       <motion.div
         animate={{
           y: [0, -12, 0],

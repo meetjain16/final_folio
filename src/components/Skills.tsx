@@ -112,9 +112,9 @@ const Skills = () => {
                       <span className="font-medium text-dark-700 dark:text-dark-200">
                         {skill.name}
                       </span>
-                      <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
+                      {/* <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
                         {skill.level}%
-                      </span>
+                      </span> */}
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-dark-600 rounded-full h-2 overflow-hidden">
                       <motion.div
