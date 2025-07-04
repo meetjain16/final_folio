@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Code, Palette, Database, Cloud } from 'lucide-react'
+import { Code,  Database } from 'lucide-react'
 import FloatingElements from './FloatingElements'
 
 interface Skill {
