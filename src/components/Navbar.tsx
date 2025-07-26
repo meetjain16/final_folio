@@ -25,6 +25,8 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
+    { name: 'Leadership', href: '#leadership' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -37,15 +39,12 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
   }
 
   return (
-    
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-white/20 dark:bg-dark-900/80 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     } ${shrink ? 'py-1' : 'py-4'}`}>
       <div className={`container-custom transition-all duration-300 ${shrink ? 'py-1' : 'py-3'}`}>
-
-          
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className={`font-bold gradient-text transition-all duration-300 ${shrink ? 'text-lg' : 'text-2xl'}`}>Portfolio</div>

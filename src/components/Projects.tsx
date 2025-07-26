@@ -21,10 +21,10 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack Salon platform built with React, Node.js, and MongoDB. Features include user authentication,Shop mangement,Appointment booking.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
+      title: 'Text-To-Image AI Site',
+      description: 'A full-stack web application that generates images from text descriptions using AI. Built with MERN stack and integrated with AI APIs for image generation.',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop',
+      technologies: ['MERN Stack', 'AI APIs', 'React', 'Node.js', 'MongoDB'],
       category: 'fullstack',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
@@ -32,10 +32,10 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Aurora- Intelligence in every voice',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop',
-      technologies: ['React', 'TypeScript', 'Socket.io', 'Express', 'PostgreSQL'],
+      title: 'AI ChatBot',
+      description: 'An intelligent chatbot application that provides conversational AI capabilities. Features natural language processing and real-time responses.',
+      image: 'https://images.unsplash.com/photo-1676299251956-415922cff6f0?w=500&h=300&fit=crop',
+      technologies: ['React', 'Node.js', 'AI/ML', 'WebSocket', 'MongoDB'],
       category: 'fullstack',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
@@ -43,11 +43,44 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Dynamic Prizing of Ride ML model',
-      description: 'Built a ML model to predict the Taxi Fare Of the ride ,used a dataset from Kaggle consisting various parameters in it.',
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=500&h=300&fit=crop',
-      technologies: ['React', 'TypeScript', 'Chart.js', 'OpenWeather API'],
-      category: 'frontend',
+      title: 'SereneStyles - Salon Website',
+      description: 'A comprehensive salon management website with booking system, service catalog, and admin dashboard. Modern UI/UX with responsive design.',
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=300&fit=crop',
+      technologies: ['MERN Stack', 'React', 'Express.js', 'MongoDB', 'Tailwind CSS'],
+      category: 'fullstack',
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com/example',
+      featured: false
+    },
+    {
+      id: 4,
+      title: 'Dynamic Pricing ML Model',
+      description: 'Machine learning model to predict taxi fare based on various parameters. Built using Python and trained on Kaggle dataset with multiple features.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
+      technologies: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn', 'Jupyter'],
+      category: 'ml',
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com/example',
+      featured: false
+    },
+    {
+      id: 5,
+      title: 'Snake and Ladder Game',
+      description: 'Classic snake and ladders game built with Python and Tkinter GUI. Features interactive gameplay, score tracking, and smooth animations.',
+      image: 'https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=500&h=300&fit=crop',
+      technologies: ['Python', 'Tkinter', 'Game Development', 'GUI'],
+      category: 'python',
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com/example',
+      featured: false
+    },
+    {
+      id: 6,
+      title: 'Automated Backup System',
+      description: 'Bash script designed for automating backup processes using Cisco Packet Tracer. Implements efficient backup strategies and data management.',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop',
+      technologies: ['Bash Scripting', 'Cisco Packet Tracer', 'Automation', 'System Administration'],
+      category: 'automation',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
       featured: false
@@ -56,10 +89,10 @@ const Projects = () => {
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    // { id: 'frontend', label: 'Frontend' },
-    // { id: 'backend', label: 'Backend' },
-    // { id: 'fullstack', label: 'Full Stack' },
-    // { id: 'design', label: 'Design' }
+    { id: 'fullstack', label: 'Full Stack' },
+    { id: 'ml', label: 'Machine Learning' },
+    { id: 'python', label: 'Python' },
+    { id: 'automation', label: 'Automation' }
   ]
 
   const filteredProjects = activeFilter === 'all' 
@@ -70,8 +103,6 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-gray-50 dark:bg-dark-800 relative overflow-hidden">
       {/* Background Animations */}
       <FloatingElements />
-         {/* Particle Grid */}
-         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.2)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
       
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-transparent to-pink-50/30 dark:from-purple-900/20 dark:via-transparent dark:to-pink-900/20"></div>
@@ -86,7 +117,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience.
+            Here are some of my recent projects that showcase my skills and experience across different technologies.
           </p>
         </motion.div>
 

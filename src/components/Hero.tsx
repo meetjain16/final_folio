@@ -22,6 +22,7 @@ const Hero = () => {
         <polygon points="40,10 70,70 10,70" fill="#a5b4fc" opacity="0.3" />
         <circle cx="40" cy="40" r="18" fill="#f472b6" opacity="0.2" />
       </motion.svg>
+      
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-purple-50 dark:from-dark-800 dark:to-dark-900"></div>
       
@@ -85,7 +86,7 @@ const Hero = () => {
       />
 
       {/* Particle Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.2)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.1)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
       
       {/* Animated Lines */}
       <motion.div
@@ -146,7 +147,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-2xl md:text-3xl text-dark-600 dark:text-dark-300 mb-8"
           >
-            Full Stack Developer & UI/UX Designer
+            B.E. Computer Science & Data Science Student
           </motion.h2>
 
           {/* Description */}
@@ -156,8 +157,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-dark-600 dark:text-dark-300 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            I create beautiful, functional, and user-centered digital experiences. 
-            Passionate about clean code, innovative design, and building products that make a difference.
+            A passionate B.E. student in Computer Science and Data Science with a strong passion for technology 
+            and a keen interest in Web and App Development. Meticulous and detail-oriented with excellent 
+            observational, organizational, and communication skills.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -174,8 +176,9 @@ const Hero = () => {
               <Mail size={20} />
               Get In Touch
             </button>
+            
             <a
-              href="public\MEET_JAIN_RESUME_V8.pdf"
+              href="/Meet_Jain_Resume.pdf"
               download
               className="btn-secondary flex items-center gap-2 px-8 py-3 text-lg"
             >
@@ -185,7 +188,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Stats */}
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -193,17 +196,17 @@ const Hero = () => {
           >
             <div className="text-center">
               <div className="text-3xl font-bold gradient-text">3+</div>
-              <div className="text-sm text-dark-600 dark:text-dark-300">Years Experience</div>
+              <div className="text-sm text-dark-600 dark:text-dark-300">Internships</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text">50+</div>
+              <div className="text-3xl font-bold gradient-text">10+</div>
               <div className="text-sm text-dark-600 dark:text-dark-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text">100%</div>
-              <div className="text-sm text-dark-600 dark:text-dark-300">Client Satisfaction</div>
+              <div className="text-3xl font-bold gradient-text">95%</div>
+              <div className="text-sm text-dark-600 dark:text-dark-300">Academic Excellence</div>
             </div>
-          </motion.div> */}
+          </motion.div>
         </div>
       </div>
 

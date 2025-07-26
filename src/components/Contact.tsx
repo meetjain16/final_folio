@@ -10,12 +10,6 @@ const Contact = () => {
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-  }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -23,23 +17,31 @@ const Contact = () => {
     })
   }
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission here
+    console.log('Form submitted:', formData)
+    // Reset form
+    setFormData({ name: '', email: '', subject: '', message: '' })
+  }
+
   const contactInfo = [
     {
       icon: <Mail className="text-primary-600" size={24} />,
       title: 'Email',
-      value: 'jainmeet162003@gmail.com',
-      link: 'mailto:jainmeet162003@gmail.com'
+      value: 'meetjain@example.com',
+      link: 'mailto:meetjain@example.com'
     },
     {
       icon: <Phone className="text-primary-600" size={24} />,
       title: 'Phone',
-      value: '+91 7995559515',
-      link: 'tel:+91 7995559515'
+      value: '+91 98765 43210',
+      link: 'tel:+919876543210'
     },
     {
       icon: <MapPin className="text-primary-600" size={24} />,
       title: 'Location',
-      value: 'Bangalore, India',
+      value: 'Bangalore, Karnataka, India',
       link: '#'
     }
   ]
@@ -53,17 +55,17 @@ const Contact = () => {
     {
       icon: <Linkedin size={20} />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourusername'
+      url: 'https://linkedin.com/in/meetjain'
     },
     {
       icon: <Twitter size={20} />,
       name: 'Twitter',
-      url: 'https://twitter.com/yourusername'
+      url: 'https://twitter.com/meetjain'
     }
   ]
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding bg-white dark:bg-dark-900 relative overflow-hidden">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +76,7 @@ const Contact = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
           </p>
         </motion.div>
 
@@ -86,9 +88,8 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-8">Let's Connect</h3>
+            <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
             
-            {/* Contact Info */}
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -97,15 +98,13 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center gap-4"
+                  className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-dark-800 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors duration-200"
                 >
                   <div className="flex-shrink-0">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-dark-900 dark:text-white">
-                      {info.title}
-                    </h4>
+                    <h4 className="font-semibold text-dark-900 dark:text-white">{info.title}</h4>
                     <a
                       href={info.link}
                       className="text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
@@ -149,6 +148,8 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
+            <h3 className="text-2xl font-bold mb-8">Send Me a Message</h3>
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -162,10 +163,11 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-700 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
                     placeholder="Your name"
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-dark-700 dark:text-dark-200 mb-2">
                     Email
@@ -177,7 +179,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-700 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -194,7 +196,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-700 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
                   placeholder="What's this about?"
                 />
               </div>
@@ -210,8 +212,8 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-700 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400 resize-none"
-                  placeholder="Tell me about your project..."
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400 resize-none"
+                  placeholder="Tell me about your project or opportunity..."
                 />
               </div>
               

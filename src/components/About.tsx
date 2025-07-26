@@ -5,31 +5,25 @@ import FloatingElements from './FloatingElements'
 const About = () => {
   const experiences = [
     {
+      year: 'July 2025',
+      title: 'Founder\'s Office Intern',
+      company: 'CubeHQ.ai',
+      location: 'Bangalore, Karnataka',
+      description: 'Working in the founder\'s office gaining valuable insights into startup operations and business development.'
+    },
+    {
       year: 'November 2024',
-      title: 'INTERN -Front End App Developer',
+      title: 'Intern - Front End App Developer',
       company: 'BYTEDOCKER',
-      description: 'Collaborated with a team to develop and implement key features, including the Feed Screen, Posts Screen,Profile Screen for the Inovact Social mobile app.'
+      location: 'Bangalore, Karnataka',
+      description: 'Collaborated with a team to develop and implement key features, including the Feed Screen, Posts Screen, and Profile Screen for the Inovact Social mobile app.'
     },
     {
-      year: 'March 2023-Dec 2023',
-      title: 'INTERN -Front End App Developer',
+      year: 'March 2023 - Dec 2023',
+      title: 'Intern - Front End App Developer',
       company: 'SKILLFINDR',
-      description: 'Collaborated with a team to develop and implement key features, including the Profile Screen, Menu Screen, Achievements Screen, and Filters Screen for the SkillFindr mobile app.'
-    },
-    // {
-    //   year: '2020 - 2021',
-    //   title: 'Junior Developer',
-    //   company: 'Digital Agency',
-    //   description: 'Developed and maintained client websites using React and Node.js.'
-    // }
-  ]
-
-  const education = [
-    {
-      year: '2022 - 2026',
-      degree: 'B.E in Computer Science-Data Science',
-      school: 'B.M.S College of Engineering, Bangalore',
-      // description: 'Specialized in Software Engineering and Web Development'
+      location: 'Bangalore, Karnataka',
+      description: 'Collaborated with a team to develop and implement key features. The startup, utilizing this product, successfully raised a pre-seed funding round, showcasing the collective impact of the team\'s efforts.'
     }
   ]
 
@@ -66,18 +60,19 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-6">Who I Am</h3>
             <div className="space-y-6 text-dark-600 dark:text-dark-300">
               <p className="leading-relaxed">
-                I'm a passionate Full Stack Developer with over 3 years of experience creating 
-                digital solutions that make a real impact. I believe in writing clean, maintainable 
-                code and designing intuitive user experiences.
+                I'm a B.E. student in Computer Science and Data Science with a strong passion for technology 
+                and a keen interest in Web and App Development. I am meticulous and detail-oriented with 
+                excellent observational, organizational, and communication skills.
               </p>
               <p className="leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community. I'm always 
-                eager to learn and take on new challenges.
+                I'm willing to take on any task to help the team with a hardworking and resourceful approach. 
+                My experience spans across multiple internships where I've contributed to real-world projects 
+                and helped startups achieve their goals.
               </p>
               <p className="leading-relaxed">
-                My approach combines technical expertise with creative problem-solving, ensuring 
-                that every project I work on is not only functional but also delightful to use.
+                Beyond technical skills, I'm actively involved in leadership roles, serving as Director of 
+                Curation and Strategies for Institution's Innovation Council (IIC) at BMSCE, and coordinating 
+                multiple events for college fests.
               </p>
             </div>
 
@@ -89,88 +84,53 @@ const About = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="text-primary-600" size={20} />
-                <span>Based in Bangalore, India</span>
+                <span>Based in Bangalore, Karnataka</span>
               </div>
-              {/* <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
                 <GraduationCap className="text-primary-600" size={20} />
-                <span>B.M.S College of Engineering, Bangalore</span>
-                <span>B.E. Computer Science-Data Science Graduate</span>
-              </div> */}
+                <span>B.E. Computer Science & Data Science</span>
+              </div>
             </div>
           </motion.div>
 
-          {/* Experience & Education */}
+          {/* Experience */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8"
           >
-            {/* Experience */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Briefcase className="text-primary-600" size={24} />
-                Experience
-              </h3>
-              <div className="space-y-6">
-                {experiences.map((exp, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-md transition-shadow duration-300"
-                  >
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-semibold text-lg">{exp.title}</h4>
-                      <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
-                        {exp.year}
-                      </span>
-                    </div>
-                    <p className="text-primary-600 dark:text-primary-400 font-medium mb-2">
-                      {exp.company}
-                    </p>
-                    <p className="text-dark-600 dark:text-dark-300 text-sm">
-                      {exp.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Education */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <GraduationCap className="text-primary-600" size={24} />
-                Education
-              </h3>
-              <div className="space-y-6">
-                {education.map((edu, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-md transition-shadow duration-300"
-                  >
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-semibold text-lg">{edu.degree}</h4>
-                      <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
-                        {edu.year}
-                      </span>
-                    </div>
-                    <p className="text-primary-600 dark:text-primary-400 font-medium mb-2">
-                      {edu.school}
-                    </p>
-                    <p className="text-dark-600 dark:text-dark-300 text-sm">
-                      {/* {edu.description} */}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Briefcase className="text-primary-600" size={24} />
+              Experience
+            </h3>
+            <div className="space-y-6">
+              {experiences.map((exp, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-md transition-shadow duration-300"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <h4 className="font-semibold text-lg">{exp.title}</h4>
+                    <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
+                      {exp.year}
+                    </span>
+                  </div>
+                  <p className="text-primary-600 dark:text-primary-400 font-medium mb-2">
+                    {exp.company}
+                  </p>
+                  <p className="text-dark-500 dark:text-dark-400 text-sm mb-2">
+                    {exp.location}
+                  </p>
+                  <p className="text-dark-600 dark:text-dark-300 text-sm">
+                    {exp.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
