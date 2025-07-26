@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react'
+import { GraduationCap, Award, MapPin } from 'lucide-react'
 import FloatingElements from './FloatingElements'
 
 const Education = () => {

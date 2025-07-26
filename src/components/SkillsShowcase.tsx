@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Code, Database, Palette, Cloud, Star, Target, TrendingUp } from 'lucide-react'
+import { Code, Database, Palette, Cloud} from 'lucide-react'
 import FloatingElements from './FloatingElements'
 
 const SkillsShowcase = () => {
@@ -309,7 +309,7 @@ const SkillsShowcase = () => {
               {/* Radar Grid */}
               <svg className="w-80 h-80" viewBox="0 0 200 200">
                 {/* Grid circles */}
-                {[20, 40, 60, 80].map((radius, i) => (
+                {[20, 40, 60, 80].map((radius) => (
                   <circle
                     key={radius}
                     cx="100"

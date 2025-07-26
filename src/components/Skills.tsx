@@ -152,7 +152,7 @@ const Skills = () => {
               <div className="relative w-48 h-48">
                 <svg className="w-48 h-48" viewBox="0 0 200 200" style={{ overflow: 'visible' }}>
                   {/* Grid circles */}
-                  {[20, 40, 60, 80].map((radius, i) => (
+                  {[20, 40, 60, 80].map((radius) => (
                     <circle
                       key={radius}
                       cx="100"
@@ -166,7 +166,7 @@ const Skills = () => {
                   ))}
                   
                   {/* Grid lines */}
-                  {[0, 60, 120, 180, 240, 300].map((angle, i) => {
+                  {[0, 60, 120, 180, 240, 300].map((angle) => {
                     const rad = (angle - 90) * (Math.PI / 180)
                     const x = 100 + 80 * Math.cos(rad)
                     const y = 100 + 80 * Math.sin(rad)
