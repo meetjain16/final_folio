@@ -192,20 +192,20 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="grid grid-cols-3 gap-8 max-w-md mx-auto"
+            className="grid grid-cols-2 gap-8 max-w-md mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text">3+</div>
+              <div className="text-3xl font-bold gradient-text">3</div>
               <div className="text-sm text-dark-600 dark:text-dark-300">Internships</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text">10+</div>
+              <div className="text-3xl font-bold gradient-text">5+</div>
               <div className="text-sm text-dark-600 dark:text-dark-300">Projects Completed</div>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-3xl font-bold gradient-text">95%</div>
               <div className="text-sm text-dark-600 dark:text-dark-300">Academic Excellence</div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
