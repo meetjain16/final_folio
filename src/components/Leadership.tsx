@@ -6,9 +6,9 @@ const Leadership = () => {
   const leadershipRoles = [
     {
       icon: <Award className="text-primary-600" size={24} />,
-      title: 'Director – Curation and Strategies',
+      title: 'Director - Curation and Strategies',
       organization: 'Institution\'s Innovation Council (IIC), BMSCE',
-      period: '2024 - Present',
+      period: '2023-2024',
       description: 'Leading strategic initiatives and curating innovative programs for the institution.',
       achievements: [
         'Developed and implemented strategic plans for innovation initiatives',

@@ -29,14 +29,14 @@ const Contact = () => {
     {
       icon: <Mail className="text-primary-600" size={24} />,
       title: 'Email',
-      value: 'meetjain@example.com',
-      link: 'mailto:meetjain@example.com'
+      value: 'jainmeet162003@gmail.com',
+      link: 'mailto:jainmeet162003@gmail.com'
     },
     {
       icon: <Phone className="text-primary-600" size={24} />,
       title: 'Phone',
-      value: '+91 98765 43210',
-      link: 'tel:+919876543210'
+      value: '+91 7995559515',
+      link: 'tel:+917995559515'
     },
     {
       icon: <MapPin className="text-primary-600" size={24} />,
@@ -55,13 +55,13 @@ const Contact = () => {
     {
       icon: <Linkedin size={20} />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/meetjain'
+      url: 'https://www.linkedin.com/in/meet-jain-912223248'
     },
-    {
-      icon: <Twitter size={20} />,
-      name: 'Twitter',
-      url: 'https://twitter.com/meetjain'
-    }
+    // {
+    //   icon: <Twitter size={20} />,
+    //   name: 'Twitter',
+    //   url: 'https://twitter.com/meetjain'
+    // }
   ]
 
   return (
