@@ -32,7 +32,7 @@ const Leadership = () => {
       icon: <Calendar className="text-primary-600" size={24} />,
       title: 'Event Coordinator',
       organization: 'College Clubs and Fests',
-      period: '2023 - Present',
+      // period: '2023 - Present',
       description: 'Organized and coordinated multiple events for various clubs and college festivals.',
       achievements: [
         'Planned and executed various club events and activities',
