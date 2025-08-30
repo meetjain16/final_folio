@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react'
+import { Github, Linkedin,  Mail } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const Footer = () => {
@@ -57,11 +57,11 @@ const Footer = () => {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/meet-jain-912223248'
     },
-    {
-      icon: <Twitter size={20} />,
-      name: 'Twitter',
-      url: 'https://twitter.com/yourusername'
-    },
+    // {
+    //   icon: <Twitter size={20} />,
+    //   name: 'Twitter',
+    //   url: 'https://twitter.com/yourusername'
+    // },
     {
       icon: <Mail size={20} />,
       name: 'Email',
