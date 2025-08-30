@@ -125,7 +125,7 @@ const Skills = () => {
                           viewport={{ once: true }}
                         />
                       </div>
-                      <span className="text-xs text-primary-600 font-medium">{skill.level}%</span>
+                      {/* <span className="text-xs text-primary-600 font-medium">{skill.level}%</span> */}
                     </div>
                   </motion.div>
                 ))}
