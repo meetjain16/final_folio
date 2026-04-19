@@ -1,0 +1,50 @@
+[
+  {
+    "place": "Ladakh",
+    "date": "July 2024",
+    "description": "High-altitude desert landscapes, crystal-clear Pangong Lake, and quiet monasteries — a trip that felt like another planet.",
+    "image": "https://images.unsplash.com/photo-1597074869293-ffc0777f5553?w=800&q=80",
+    "lat": 34.1526,
+    "lng": 77.5771
+  },
+  {
+    "place": "Manali",
+    "date": "June 2023",
+    "description": "First solo trip into the mountains. Misty mornings, pine forests, and the simple joy of slowing down.",
+    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80",
+    "lat": 32.2396,
+    "lng": 77.1887
+  },
+  {
+    "place": "Jaipur",
+    "date": "March 2023",
+    "description": "Pink city architecture, street food, and wandering through historic forts with friends.",
+    "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=80",
+    "lat": 26.9124,
+    "lng": 75.7873
+  },
+  {
+    "place": "Goa",
+    "date": "December 2022",
+    "description": "Sunset walks on the beach, coastal roads, and the relaxed rhythm of the Konkan coast.",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
+    "lat": 15.2993,
+    "lng": 74.124
+  },
+  {
+    "place": "Rishikesh",
+    "date": "May 2022",
+    "description": "Ganga ghats, yoga mornings, and the sound of the river — a reset before a busy semester.",
+    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
+    "lat": 30.0869,
+    "lng": 78.2676
+  },
+  {
+    "place": "Udaipur",
+    "date": "February 2022",
+    "description": "Lake Pichola reflections, narrow old-city lanes, and rooftop views over white marble palaces.",
+    "image": "https://images.unsplash.com/photo-1609948544960-7853009d5b08?w=800&q=80",
+    "lat": 24.5854,
+    "lng": 73.7125
+  }
+]

@@ -61,6 +61,17 @@ const Skills = () => {
     { name: 'NetBeans', level: 65, color: '#1B6AC6' },
   ]
 
+  const ideRadarPathD =
+    ideSkills
+      .map((skill, index) => {
+        const angle = (index * 60 - 90) * (Math.PI / 180)
+        const radius = (skill.level / 100) * 80
+        const x = 100 + radius * Math.cos(angle)
+        const y = 100 + radius * Math.sin(angle)
+        return `${index === 0 ? 'M' : 'L'} ${x} ${y}`
+      })
+      .join(' ') + ' Z'
+
   return (
     <section id="skills" className="section-padding relative overflow-hidden">
       {/* Background Animations */}
@@ -148,10 +159,15 @@ const Skills = () => {
               <h3 className="font-bold text-lg text-dark-900 dark:text-white">Tools & IDEs</h3>
             </div>
             
-            <div className="flex justify-center">
-              <div className="relative w-48 h-48">
-                <svg className="w-48 h-48" viewBox="0 0 200 200" style={{ overflow: 'visible' }}>
-                  {/* Grid circles */}
+            <div className="flex justify-center overflow-visible py-2">
+              <div className="relative w-full max-w-[220px] aspect-square">
+                <svg
+                  className="h-full w-full"
+                  viewBox="0 0 200 200"
+                  preserveAspectRatio="xMidYMid meet"
+                  style={{ overflow: 'visible' }}
+                >
+                  {/* Grid circles — explicit strokes so dark mode stays readable */}
                   {[20, 40, 60, 80].map((radius) => (
                     <circle
                       key={radius}
@@ -159,9 +175,8 @@ const Skills = () => {
                       cy="100"
                       r={radius}
                       fill="none"
-                      stroke="currentColor"
                       strokeWidth="1"
-                      className="text-gray-200 dark:text-gray-600"
+                      className="stroke-gray-200 dark:stroke-gray-400"
                     />
                   ))}
                   
@@ -177,13 +192,20 @@ const Skills = () => {
                         y1="100"
                         x2={x}
                         y2={y}
-                        stroke="currentColor"
                         strokeWidth="1"
-                        className="text-gray-200 dark:text-gray-600"
+                        className="stroke-gray-200 dark:stroke-gray-400"
                       />
                     )
                   })}
                   
+                  <defs>
+                    <linearGradient id="skillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#6366F1" />
+                      <stop offset="50%" stopColor="#8B5CF6" />
+                      <stop offset="100%" stopColor="#EC4899" />
+                    </linearGradient>
+                  </defs>
+
                   {/* Skill points */}
                   {ideSkills.map((skill, index) => {
                     const angle = (index * 60 - 90) * (Math.PI / 180)
@@ -209,13 +231,7 @@ const Skills = () => {
                   
                   {/* Animated Skill Area */}
                   <motion.path
-                    d={`M ${ideSkills.map((skill, index) => {
-                      const angle = (index * 60 - 90) * (Math.PI / 180)
-                      const radius = (skill.level / 100) * 80
-                      const x = 100 + radius * Math.cos(angle)
-                      const y = 100 + radius * Math.sin(angle)
-                      return `${index === 0 ? 'M' : 'L'} ${x} ${y}`
-                    }).join(' ')} Z`}
+                    d={ideRadarPathD}
                     fill="url(#skillGradient)"
                     fillOpacity="0.3"
                     stroke="url(#skillGradient)"
@@ -234,13 +250,7 @@ const Skills = () => {
                   
                   {/* Skill area glow effect */}
                   <motion.path
-                    d={`M ${ideSkills.map((skill, index) => {
-                      const angle = (index * 60 - 90) * (Math.PI / 180)
-                      const radius = (skill.level / 100) * 80
-                      const x = 100 + radius * Math.cos(angle)
-                      const y = 100 + radius * Math.sin(angle)
-                      return `${index === 0 ? 'M' : 'L'} ${x} ${y}`
-                    }).join(' ')} Z`}
+                    d={ideRadarPathD}
                     fill="url(#skillGradient)"
                     fillOpacity="0.1"
                     initial={{ opacity: 0 }}
@@ -248,40 +258,29 @@ const Skills = () => {
                     transition={{ duration: 2, delay: 1 }}
                     viewport={{ once: true }}
                   />
-                  
-                  <defs>
-                    <linearGradient id="skillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#6366F1" />
-                      <stop offset="50%" stopColor="#8B5CF6" />
-                      <stop offset="100%" stopColor="#EC4899" />
-                    </linearGradient>
-                  </defs>
+
+                  {/* Axis labels on top (same viewBox as grid) */}
+                  {ideSkills.map((skill, index) => {
+                    const angle = (index * 60 - 90) * (Math.PI / 180)
+                    const labelR = 94
+                    const x = 100 + labelR * Math.cos(angle)
+                    const y = 100 + labelR * Math.sin(angle)
+                    return (
+                      <text
+                        key={`label-${skill.name}`}
+                        x={x}
+                        y={y}
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        className="fill-slate-700 dark:fill-slate-200 pointer-events-none"
+                        style={{ fontSize: '9.5px', fontWeight: 600 }}
+                      >
+                        {skill.name}
+                      </text>
+                    )
+                  })}
                 </svg>
               </div>
-            </div>
-            
-            {/* Text labels positioned outside SVG */}
-            <div className="relative w-48 h-48 mx-auto -mt-48">
-              {ideSkills.map((skill, index) => {
-                const angle = (index * 60 - 90) * (Math.PI / 180)
-                const radius = 95
-                const x = 100 + radius * Math.cos(angle)
-                const y = 100 + radius * Math.sin(angle)
-                
-                return (
-                  <div
-                    key={skill.name}
-                    className="absolute text-xs font-semibold text-dark-700 dark:text-dark-200 whitespace-nowrap"
-                    style={{
-                      left: `${x}px`,
-                      top: `${y}px`,
-                      transform: 'translate(-50%, -50%)',
-                    }}
-                  >
-                    {skill.name}
-                  </div>
-                )
-              })}
             </div>
           </motion.div>
         </div>

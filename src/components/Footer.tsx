@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin,  Mail } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   const [shrink, setShrink] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +25,7 @@ const Footer = () => {
         { name: 'About', href: '#about' },
         { name: 'Skills', href: '#skills' },
         { name: 'Projects', href: '#projects' },
+        { name: 'Explore', href: '/explore' },
         { name: 'Contact', href: '#contact' }
       ]
     },
@@ -69,10 +73,14 @@ const Footer = () => {
     }
   ]
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  const goToSection = (href: string) => {
+    if (location.pathname === '/') {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      navigate(`/${href}`)
     }
   }
 
@@ -127,31 +135,53 @@ const Footer = () => {
             >
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <motion.li
-                    key={link.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: (sectionIndex * 0.1) + (linkIndex * 0.05) }}
-                    viewport={{ once: true }}
-                  >
-                    <a
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                      href={link.href}
-                      onClick={(e) => {
-                        if (link.href.startsWith('#')) {
-                          e.preventDefault()
-                          scrollToSection(link.href)
-                        }
-                      }}
-                      className="text-dark-300 hover:text-primary-400 transition-colors duration-200"
+                {section.links.map((link, linkIndex) => {
+                  const isPlaceholder = link.href === '#'
+                  const isSection = link.href.startsWith('#') && link.href.length > 1
+                  const isInternalRoute = link.href.startsWith('/') && !link.href.startsWith('//')
+                  const isExternal = link.href.startsWith('http')
+
+                  return (
+                    <motion.li
+                      key={link.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: (sectionIndex * 0.1) + (linkIndex * 0.05) }}
+                      viewport={{ once: true }}
                     >
-                      {link.name}
-                    </a>
-                  </motion.li>
-                ))}
+                      {isPlaceholder && (
+                        <span className="text-dark-400 cursor-default">{link.name}</span>
+                      )}
+                      {isSection && (
+                        <button
+                          type="button"
+                          onClick={() => goToSection(link.href)}
+                          className="text-left text-dark-300 hover:text-primary-400 transition-colors duration-200"
+                        >
+                          {link.name}
+                        </button>
+                      )}
+                      {isInternalRoute && (
+                        <Link
+                          to={link.href}
+                          className="text-dark-300 hover:text-primary-400 transition-colors duration-200"
+                        >
+                          {link.name}
+                        </Link>
+                      )}
+                      {isExternal && (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-dark-300 hover:text-primary-400 transition-colors duration-200"
+                        >
+                          {link.name}
+                        </a>
+                      )}
+                    </motion.li>
+                  )
+                })}
               </ul>
             </motion.div>
           ))}
