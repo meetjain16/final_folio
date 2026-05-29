@@ -1,7 +1,6 @@
 import { lazy, Suspense, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, Calendar, ChevronDown, List, Map as MapIcon } from 'lucide-react'
+import { Calendar, ChevronDown, List, Map as MapIcon } from 'lucide-react'
 import journeyRaw from '../data/journey.json'
 import type { JourneyEntry } from '../types/journey'
 import FloatingElements from '../components/FloatingElements'
