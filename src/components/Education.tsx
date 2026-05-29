@@ -31,12 +31,12 @@ const Education = () => {
   ]
 
   return (
-    <section id="education" className="section-padding bg-white dark:bg-dark-900 relative overflow-hidden">
+    <section id="education" className="section-padding relative overflow-hidden">
       {/* Background Animations */}
       <FloatingElements />
       
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-indigo-50/30 dark:from-blue-900/20 dark:via-transparent dark:to-indigo-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/25 via-transparent to-indigo-50/25 dark:from-blue-900/10 dark:via-transparent dark:to-indigo-900/10"></div>
       
       <div className="container-custom relative z-10">
         <motion.div
@@ -44,10 +44,11 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="section-heading"
         >
-          <h2 className="text-4xl font-bold mb-4">Education</h2>
-          <p className="text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          <div className="section-kicker">Education</div>
+          <h2 className="section-title">Education</h2>
+          <p className="section-copy max-w-2xl mx-auto">
             My academic journey and educational achievements that have shaped my technical foundation.
           </p>
         </motion.div>
@@ -60,7 +61,7 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-dark-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] relative overflow-hidden"
+              className="surface relative overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
             >
               {/* Background Icon */}
               <div className="absolute top-4 right-4 opacity-10">
@@ -70,7 +71,7 @@ const Education = () => {
               <div className="relative z-10">
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-primary-100 dark:bg-primary-900/30 p-2 rounded-lg">
+                  <div className="rounded-2xl bg-primary-500/10 p-2">
                     <GraduationCap className="text-primary-600" size={24} />
                   </div>
                   <div>
@@ -125,11 +126,11 @@ const Education = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 p-8 rounded-lg border border-primary-100 dark:border-primary-800">
-            <h3 className="text-2xl font-bold mb-4 text-dark-900 dark:text-white">
+          <div className="surface p-8">
+              <h3 className="mb-4 text-2xl font-display font-semibold text-dark-900 dark:text-white">
               Academic Excellence
             </h3>
-            <p className="text-lg text-dark-600 dark:text-dark-300 mb-6 max-w-2xl mx-auto">
+              <p className="mb-6 max-w-2xl mx-auto text-lg text-dark-600 dark:text-dark-300">
               Maintaining a strong academic record with 95.2% in High School and 88.8% in Intermediate, 
               demonstrating consistent dedication to learning and excellence in education.
             </p>

@@ -28,12 +28,12 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-dark-800 relative overflow-hidden">
+    <section id="about" className="section-padding relative overflow-hidden">
       {/* Background Animations */}
       <FloatingElements />
       
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 via-transparent to-purple-50/30 dark:from-primary-900/20 dark:via-transparent dark:to-purple-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50/25 via-transparent to-purple-50/25 dark:from-primary-900/10 dark:via-transparent dark:to-purple-900/10"></div>
       
       <div className="container-custom relative z-10">
         <motion.div
@@ -41,10 +41,11 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="section-heading"
         >
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          <div className="section-kicker">About</div>
+          <h2 className="section-title">About Me</h2>
+          <p className="section-copy max-w-2xl mx-auto">
             Get to know me better - my journey, experience, and what drives me to create amazing digital experiences.
           </p>
         </motion.div>
@@ -56,8 +57,9 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="surface p-6 md:p-8"
           >
-            <h3 className="text-2xl font-bold mb-6">Who I Am</h3>
+            <h3 className="mb-6 text-2xl font-display font-semibold">Who I Am</h3>
             <div className="space-y-6 text-dark-600 dark:text-dark-300">
               <p className="leading-relaxed">
                 I'm a B.E. student in Computer Science and Data Science with a strong passion for technology 
@@ -78,15 +80,15 @@ const About = () => {
 
             {/* Personal Details */}
             <div className="mt-8 space-y-4">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 rounded-2xl bg-white/60 px-4 py-3 dark:bg-dark-900/40">
                 <Calendar className="text-primary-600" size={20} />
                 <span>Born in 2003</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 rounded-2xl bg-white/60 px-4 py-3 dark:bg-dark-900/40">
                 <MapPin className="text-primary-600" size={20} />
                 <span>Based in Bangalore, Karnataka</span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 rounded-2xl bg-white/60 px-4 py-3 dark:bg-dark-900/40">
                 <GraduationCap className="text-primary-600" size={20} />
                 <span>B.E. Computer Science & Data Science</span>
               </div>
@@ -99,8 +101,9 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="surface p-6 md:p-8"
           >
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <h3 className="mb-6 flex items-center gap-2 text-2xl font-display font-semibold">
               <Briefcase className="text-primary-600" size={24} />
               Experience
             </h3>
@@ -112,7 +115,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-md transition-shadow duration-300"
+                  className="surface p-6 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex justify-between items-start mb-2">
                     <h4 className="font-semibold text-lg">{exp.title}</h4>

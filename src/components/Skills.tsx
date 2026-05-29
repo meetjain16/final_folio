@@ -86,10 +86,11 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="section-heading"
         >
-          <h2 className="text-4xl font-bold mb-4">Skills & Expertise</h2>
-          <p className="text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          <div className="section-kicker">Skills</div>
+          <h2 className="section-title">Skills & Expertise</h2>
+          <p className="section-copy max-w-2xl mx-auto">
             A comprehensive overview of my technical skills and expertise across different domains.
           </p>
         </motion.div>
@@ -105,10 +106,10 @@ const Skills = () => {
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-all duration-300"
+              className="surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg mb-3">
+                <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-500/10">
                   {category.icon}
                 </div>
                 <h3 className="font-bold text-lg text-dark-900 dark:text-white">{category.title}</h3>
@@ -150,10 +151,10 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-all duration-300"
+            className="surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
           >
             <div className="text-center mb-6">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg mb-3">
+                <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-500/10">
                 <Cloud className="text-orange-500" size={24} />
               </div>
               <h3 className="font-bold text-lg text-dark-900 dark:text-white">Tools & IDEs</h3>
@@ -293,7 +294,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold mb-8">Other Skills & Tools</h3>
+          <h3 className="mb-8 text-2xl font-display font-semibold">Other Skills & Tools</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
               'Work Bench', 'Code::Blocks', 'Canva', 'Figma', 'Kinemaster', 'VN',
@@ -307,7 +308,7 @@ const Skills = () => {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-gray-100 dark:bg-dark-600 px-4 py-2 rounded-lg text-center text-sm font-medium text-dark-700 dark:text-dark-200 hover:bg-primary-100 dark:hover:bg-primary-900/20 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 cursor-pointer"
+                className="cursor-pointer rounded-2xl border border-white/60 bg-white/70 px-4 py-2 text-center text-sm font-medium text-dark-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-500/20 hover:bg-white hover:text-primary-600 dark:border-white/10 dark:bg-dark-800/60 dark:text-dark-200 dark:hover:bg-dark-700 dark:hover:text-white"
               >
                 {skill}
               </motion.div>

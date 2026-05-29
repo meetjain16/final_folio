@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   const [shrink, setShrink] = useState(false)
-  const location = useLocation()
-  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +19,14 @@ const Footer = () => {
     {
       title: 'Quick Links',
       links: [
-        { name: 'Home', href: '#home' },
-        { name: 'About', href: '#about' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Explore', href: '/explore' },
-        { name: 'Contact', href: '#contact' }
+        { name: 'Home', href: '/' },
+        { name: 'About', href: '/about' },
+        { name: 'Skills', href: '/skills' },
+        { name: 'Projects', href: '/projects' },
+        { name: 'Education', href: '/education' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Explore', href: '/explore' }
       ]
     },
     {
@@ -73,20 +73,10 @@ const Footer = () => {
     }
   ]
 
-  const goToSection = (href: string) => {
-    if (location.pathname === '/') {
-      const element = document.querySelector(href)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    } else {
-      navigate(`/${href}`)
-    }
-  }
-
   return (
-    <footer className={`bg-dark-900 text-white transition-all duration-300 ${shrink ? 'py-2' : ''}`}>
-      <div className={`container-custom ${shrink ? 'py-4' : 'section-padding'} transition-all duration-300`}>
+    <footer className={`relative overflow-hidden bg-dark-900 text-white transition-all duration-300 ${shrink ? 'py-2' : ''}`}>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.16),transparent_35%),radial-gradient(circle_at_top_right,rgba(217,70,239,0.12),transparent_30%)]" />
+      <div className={`container-custom relative z-10 ${shrink ? 'py-4' : 'section-padding'} transition-all duration-300`}>
 
         {/* Main Footer Content */}
         <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 ${shrink ? 'mb-4' : ''}`}>
@@ -99,7 +89,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <div className={`font-bold gradient-text mb-4 ${shrink ? 'text-lg' : 'text-2xl'}`}>Portfolio</div>
+            <div className={`font-display font-bold gradient-text mb-4 ${shrink ? 'text-lg' : 'text-2xl'}`}>Portfolio</div>
             <p className={`text-dark-300 mb-6 leading-relaxed ${shrink ? 'text-xs' : ''}`}>
               A passionate Full Stack Developer creating beautiful, functional, and user-centered digital experiences.
             </p>
@@ -116,7 +106,7 @@ const Footer = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-dark-800 rounded-lg hover:bg-primary-600 text-dark-300 hover:text-white transition-all duration-200 ${shrink ? 'p-2' : 'p-3'}`}
+                  className={`rounded-2xl border border-white/10 bg-white/5 text-dark-300 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-600 hover:text-white ${shrink ? 'p-2' : 'p-3'}`}
                 >
                   {social.icon}
                 </motion.a>
@@ -133,11 +123,10 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <h3 className="mb-4 text-lg font-semibold">{section.title}</h3>
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => {
                   const isPlaceholder = link.href === '#'
-                  const isSection = link.href.startsWith('#') && link.href.length > 1
                   const isInternalRoute = link.href.startsWith('/') && !link.href.startsWith('//')
                   const isExternal = link.href.startsWith('http')
 
@@ -151,15 +140,6 @@ const Footer = () => {
                     >
                       {isPlaceholder && (
                         <span className="text-dark-400 cursor-default">{link.name}</span>
-                      )}
-                      {isSection && (
-                        <button
-                          type="button"
-                          onClick={() => goToSection(link.href)}
-                          className="text-left text-dark-300 hover:text-primary-400 transition-colors duration-200"
-                        >
-                          {link.name}
-                        </button>
                       )}
                       {isInternalRoute && (
                         <Link
@@ -188,7 +168,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className={`border-t border-dark-700 ${shrink ? 'pt-2' : 'pt-8'}`}>
+        <div className={`border-t border-white/10 ${shrink ? 'pt-2' : 'pt-8'}`}>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <motion.div

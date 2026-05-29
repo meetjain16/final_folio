@@ -60,13 +60,13 @@ const Explore = () => {
           className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
         >
           <div>
-            <Link
+            {/* <Link
               to="/"
               className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-500 dark:text-primary-400"
             >
               <ArrowLeft size={16} aria-hidden />
               Back to portfolio
-            </Link>
+            </Link> */}
             <h1 className="text-3xl font-bold tracking-tight text-dark-900 dark:text-white sm:text-4xl">
               My Journey
             </h1>

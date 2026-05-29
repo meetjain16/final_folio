@@ -65,17 +65,18 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-dark-900 relative overflow-hidden">
+    <section id="contact" className="section-padding relative overflow-hidden">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="section-heading"
         >
-          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          <div className="section-kicker">Contact</div>
+          <h2 className="section-title">Get In Touch</h2>
+          <p className="section-copy max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
           </p>
         </motion.div>
@@ -87,8 +88,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="surface p-6 md:p-8"
           >
-            <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
+            <h3 className="mb-8 text-2xl font-display font-semibold">Contact Information</h3>
             
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
@@ -98,7 +100,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-dark-800 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors duration-200"
+                  className="flex items-center gap-4 rounded-2xl border border-white/60 bg-white/70 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white dark:border-white/10 dark:bg-dark-900/35 dark:hover:bg-dark-800/60"
                 >
                   <div className="flex-shrink-0">
                     {info.icon}
@@ -118,7 +120,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-dark-900 dark:text-white">
+              <h4 className="mb-4 text-lg font-semibold text-dark-900 dark:text-white">
                 Follow Me
               </h4>
               <div className="flex gap-4">
@@ -132,7 +134,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-gray-100 dark:bg-dark-700 p-3 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/20 text-dark-700 dark:text-dark-200 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200"
+                    className="rounded-2xl border border-white/60 bg-white/70 p-3 text-dark-700 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-primary-600 dark:border-white/10 dark:bg-dark-800/60 dark:text-dark-200 dark:hover:bg-dark-700 dark:hover:text-white"
                   >
                     {social.icon}
                   </motion.a>
@@ -147,8 +149,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="surface p-6 md:p-8"
           >
-            <h3 className="text-2xl font-bold mb-8">Send Me a Message</h3>
+            <h3 className="mb-8 text-2xl font-display font-semibold">Send Me a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -163,7 +166,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
+                    className="w-full rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-dark-900 shadow-sm outline-none transition-all duration-200 placeholder:text-dark-400 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/15 dark:border-white/10 dark:bg-dark-900/40 dark:text-white dark:placeholder:text-dark-500"
                     placeholder="Your name"
                   />
                 </div>
@@ -179,7 +182,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
+                    className="w-full rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-dark-900 shadow-sm outline-none transition-all duration-200 placeholder:text-dark-400 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/15 dark:border-white/10 dark:bg-dark-900/40 dark:text-white dark:placeholder:text-dark-500"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -196,7 +199,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400"
+                  className="w-full rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-dark-900 shadow-sm outline-none transition-all duration-200 placeholder:text-dark-400 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/15 dark:border-white/10 dark:bg-dark-900/40 dark:text-white dark:placeholder:text-dark-500"
                   placeholder="What's this about?"
                 />
               </div>
@@ -212,7 +215,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-900 dark:text-white placeholder-dark-500 dark:placeholder-dark-400 resize-none"
+                  className="w-full resize-none rounded-2xl border border-white/70 bg-white/80 px-4 py-3 text-dark-900 shadow-sm outline-none transition-all duration-200 placeholder:text-dark-400 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/15 dark:border-white/10 dark:bg-dark-900/40 dark:text-white dark:placeholder:text-dark-500"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>

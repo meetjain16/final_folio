@@ -1,227 +1,171 @@
 import { motion } from 'framer-motion'
-import { ChevronDown, Download, Mail } from 'lucide-react'
+import { ArrowRight, ChevronDown, Code2, Download, Layers, Mail, Sparkles } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+  const navigate = useNavigate()
+
   const scrollToContact = () => {
-    const element = document.querySelector('#contact')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+    navigate('/contact')
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Top Animated SVG */}
-      <motion.svg
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 0.7, y: [0, 10, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute left-1/2 -translate-x-1/2 top-0 z-20"
-        width="80" height="80" viewBox="0 0 80 80" fill="none"
-      >
-        <polygon points="40,10 70,70 10,70" fill="#a5b4fc" opacity="0.3" />
-        <circle cx="40" cy="40" r="18" fill="#f472b6" opacity="0.2" />
-      </motion.svg>
-      
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-purple-50 dark:from-dark-800 dark:to-dark-900"></div>
-      
-      {/* Animated Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 via-purple-400/20 to-pink-400/20 dark:from-primary-600/10 dark:via-purple-600/10 dark:to-pink-600/10 animate-pulse"></div>
-      
-      {/* Floating Elements */}
+    <section id="home" className="relative min-h-screen overflow-hidden">
       <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 5, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-20 left-10 w-20 h-20 bg-primary-400/20 dark:bg-primary-600/20 rounded-full blur-xl"
+        animate={{ y: [0, -18, 0], rotate: [0, 4, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute left-8 top-24 h-24 w-24 rounded-full bg-primary-500/15 blur-3xl dark:bg-primary-500/10"
       />
-      
       <motion.div
-        animate={{
-          y: [0, 30, 0],
-          rotate: [0, -5, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-        className="absolute top-40 right-20 w-32 h-32 bg-purple-400/20 dark:bg-purple-600/20 rounded-full blur-xl"
-      />
-      
-      <motion.div
-        animate={{
-          y: [0, -15, 0],
-          x: [0, 10, 0],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
-        }}
-        className="absolute bottom-40 left-20 w-16 h-16 bg-pink-400/20 dark:bg-pink-600/20 rounded-full blur-xl"
-      />
-      
-      <motion.div
-        animate={{
-          y: [0, 25, 0],
-          x: [0, -15, 0],
-        }}
-        transition={{
-          duration: 9,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 0.5
-        }}
-        className="absolute bottom-20 right-10 w-24 h-24 bg-blue-400/20 dark:bg-blue-600/20 rounded-full blur-xl"
+        animate={{ y: [0, 22, 0], x: [0, -10, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+        className="absolute right-10 top-36 h-32 w-32 rounded-full bg-fuchsia-500/15 blur-3xl dark:bg-fuchsia-500/10"
       />
 
-      {/* Particle Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(156,146,172,0.1)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse"></div>
-      
-      {/* Animated Lines */}
-      <motion.div
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-1/4 left-1/4 w-1 h-32 bg-gradient-to-b from-transparent via-primary-400/50 to-transparent dark:via-primary-600/50"
-      />
-      
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.5, 0.2],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-        className="absolute top-1/3 right-1/3 w-1 h-24 bg-gradient-to-b from-transparent via-purple-400/50 to-transparent dark:via-purple-600/50"
-      />
-      
-      <div className="container-custom section-padding relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Greeting */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-4"
-          >
-            <span className="text-primary-600 dark:text-primary-400 font-medium">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.8),_transparent_42%)] dark:bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0.6),_transparent_42%)]" />
+
+      <div className="container-custom section-padding relative z-10 flex min-h-screen items-center pt-28 lg:pt-32">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-500/15 bg-white/70 px-4 py-2 text-sm font-medium text-dark-700 shadow-sm backdrop-blur-xl dark:bg-dark-800/60 dark:text-dark-200"
+            >
+              <Sparkles size={16} className="text-primary-600" />
+              Building polished web experiences for modern products
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-primary-600 dark:text-primary-300"
+            >
               Hello, I'm
-            </span>
-          </motion.div>
+            </motion.p>
 
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
-          >
-            <span className="gradient-text">Meet Jain</span>
-          </motion.h1>
-
-          {/* Title */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl md:text-3xl text-dark-600 dark:text-dark-300 mb-8"
-          >
-            B.E. Computer Science & Data Science Student
-          </motion.h2>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg text-dark-600 dark:text-dark-300 mb-12 max-w-2xl mx-auto leading-relaxed"
-          >
-            A passionate B.E. student in Computer Science and Data Science with a strong passion for technology 
-            and a keen interest in Web and App Development. Meticulous and detail-oriented with excellent 
-            observational, organizational, and communication skills.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-          >
-            <button
-              onClick={scrollToContact}
-              className="btn-primary flex items-center gap-2 px-8 py-3 text-lg"
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="max-w-3xl text-5xl font-display font-semibold leading-[0.95] text-dark-900 dark:text-white sm:text-6xl lg:text-7xl"
             >
-              <Mail size={20} />
-              Get In Touch
-            </button>
-            
-            <a
-              href="/Meet_Jain_RESUME_V8.pdf"
-              download
-              className="btn-secondary flex items-center gap-2 px-8 py-3 text-lg"
-            >
-              <Download size={20} />
-              Download CV
-            </a>
-          </motion.div>
+              Meet Jain, a modern <span className="gradient-text">product-minded developer</span>
+            </motion.h1>
 
-          {/* Stats */}
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-6 max-w-2xl text-lg leading-8 text-dark-600 dark:text-dark-300"
+            >
+              I’m a B.E. Computer Science and Data Science student focused on web and app development. I build scalable, user-centered interfaces with a strong eye for detail, and I’m currently working as a Software Developer Intern at IndiaMART.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-8 flex flex-col gap-4 sm:flex-row"
+            >
+              <button onClick={scrollToContact} className="btn-primary">
+                <Mail size={18} />
+                Get In Touch
+                <ArrowRight size={18} />
+              </button>
+
+              <a href="/Meet_Jain_RESUME_V8.pdf" download className="btn-secondary">
+                <Download size={18} />
+                Download CV
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-10 flex flex-wrap gap-3"
+            >
+              {['React', 'MERN Stack', 'Flutter', 'UI Systems', 'AI/ML'].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/70 bg-white/75 px-4 py-2 text-sm font-medium text-dark-700 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-dark-800/60 dark:text-dark-200"
+                >
+                  {item}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-10 grid max-w-xl grid-cols-2 gap-4 sm:grid-cols-4"
+            >
+              {[
+                { value: '3', label: 'Internships' },
+                { value: '5+', label: 'Projects' },
+                { value: '2', label: 'Core Domains' },
+                { value: '1', label: 'Current Role' },
+              ].map((stat) => (
+                <div key={stat.label} className="surface p-4 text-center">
+                  <div className="text-3xl font-display font-semibold gradient-text">{stat.value}</div>
+                  <div className="mt-1 text-sm text-dark-600 dark:text-dark-300">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="grid grid-cols-2 gap-8 max-w-md mx-auto"
+            initial={{ opacity: 0, y: 24, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="surface relative mx-auto w-full max-w-xl overflow-hidden p-6 md:p-8"
           >
-            <div className="text-center">
-              <div className="text-3xl font-bold gradient-text">3</div>
-              <div className="text-sm text-dark-600 dark:text-dark-300">Internships</div>
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary-500 via-indigo-500 to-fuchsia-500" />
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-600 dark:text-primary-300">
+                  Portfolio Snapshot
+                </p>
+                <h2 className="mt-2 text-2xl font-display font-semibold text-dark-900 dark:text-white">
+                  Crafting interfaces with structure and motion
+                </h2>
+              </div>
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-600 to-fuchsia-500 text-white shadow-lg shadow-primary-500/20">
+                <Code2 size={28} />
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold gradient-text">5+</div>
-              <div className="text-sm text-dark-600 dark:text-dark-300">Projects Completed</div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {[
+                { icon: <Layers size={18} />, title: 'Systems Thinking', text: 'From landing pages to product flows' },
+                { icon: <Sparkles size={18} />, title: 'Visual Polish', text: 'Clean spacing, contrast, and hierarchy' },
+                { icon: <Code2 size={18} />, title: 'Front-end Depth', text: 'React, TypeScript, Tailwind, animation' },
+                { icon: <Mail size={18} />, title: 'Open to Work', text: 'Internships, collaborations, and freelance' },
+              ].map((item) => (
+                <div key={item.title} className="rounded-2xl border border-white/70 bg-white/70 p-4 shadow-sm dark:border-white/10 dark:bg-dark-900/40">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/10 text-primary-600 dark:text-primary-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-semibold text-dark-900 dark:text-white">{item.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-dark-600 dark:text-dark-300">{item.text}</p>
+                </div>
+              ))}
             </div>
-            {/* <div className="text-center">
-              <div className="text-3xl font-bold gradient-text">95%</div>
-              <div className="text-sm text-dark-600 dark:text-dark-300">Academic Excellence</div>
-            </div> */}
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="text-dark-600 dark:text-dark-300"
-        >
+        <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="text-dark-500 dark:text-dark-300">
           <ChevronDown size={24} />
         </motion.div>
       </motion.div>

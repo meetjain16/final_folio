@@ -62,12 +62,12 @@ const Leadership = () => {
   ]
 
   return (
-    <section id="leadership" className="section-padding bg-gray-50 dark:bg-dark-800 relative overflow-hidden">
+    <section id="leadership" className="section-padding relative overflow-hidden">
       {/* Background Animations */}
       <FloatingElements />
       
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 via-transparent to-blue-50/30 dark:from-green-900/20 dark:via-transparent dark:to-blue-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50/25 via-transparent to-blue-50/25 dark:from-green-900/10 dark:via-transparent dark:to-blue-900/10"></div>
       
       <div className="container-custom relative z-10">
         <motion.div
@@ -75,10 +75,11 @@ const Leadership = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="section-heading"
         >
-          <h2 className="text-4xl font-bold mb-4">Leadership & Achievements</h2>
-          <p className="text-lg text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          <div className="section-kicker">Leadership</div>
+          <h2 className="section-title">Leadership & Achievements</h2>
+          <p className="section-copy max-w-2xl mx-auto">
             My leadership journey and achievements that demonstrate my ability to lead teams and drive successful outcomes.
           </p>
         </motion.div>
@@ -92,11 +93,11 @@ const Leadership = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+              className="surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
             >
               {/* Header */}
               <div className="flex items-start gap-4 mb-4">
-                <div className="bg-primary-100 dark:bg-primary-900/30 p-3 rounded-lg flex-shrink-0">
+                <div className="flex-shrink-0 rounded-2xl bg-primary-500/10 p-3">
                   {role.icon}
                 </div>
                 <div>
@@ -143,7 +144,7 @@ const Leadership = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold mb-8 text-dark-900 dark:text-white">
+          <h3 className="mb-8 text-2xl font-display font-semibold text-dark-900 dark:text-white">
             Leadership Qualities
           </h3>
           
@@ -156,7 +157,7 @@ const Leadership = () => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white dark:bg-dark-700 p-4 rounded-lg shadow-sm border border-gray-100 dark:border-dark-600 hover:shadow-md transition-all duration-200"
+                className="surface p-4 transition-all duration-200 hover:-translate-y-1"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0">
