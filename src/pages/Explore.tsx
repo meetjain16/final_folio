@@ -15,7 +15,7 @@ function yearFromDate(dateStr: string): number | null {
 }
 
 function entryKey(e: JourneyEntry) {
-  return `${e.place}-${e.date}`
+  return `${e.tripId}`
 }
 
 const Explore = () => {
@@ -41,7 +41,7 @@ const Explore = () => {
       const ya = yearFromDate(a.date) ?? 0
       const yb = yearFromDate(b.date) ?? 0
       if (ya !== yb) return yb - ya
-      return a.place.localeCompare(b.place)
+      return a.tripName.localeCompare(b.tripName)
     })
     return list
   }, [yearFilter])
@@ -188,6 +188,8 @@ const Explore = () => {
                   const key = entryKey(entry)
                   const expanded = expandedKey === key
                   const isLeft = index % 2 === 0
+                  const firstPlace = entry.places[0]
+                  const placeImage = firstPlace?.image
 
                   return (
                     <motion.li
@@ -225,10 +227,10 @@ const Explore = () => {
                             className="flex w-full flex-col text-left sm:block"
                             aria-expanded={expanded}
                           >
-                            {entry.image && (
+                            {placeImage && (
                               <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100 dark:bg-dark-700">
                                 <img
-                                  src={entry.image}
+                                  src={placeImage}
                                   alt=""
                                   className={`h-full w-full object-cover transition-all duration-500 ${
                                     expanded ? 'scale-100' : 'scale-105'
@@ -241,7 +243,7 @@ const Explore = () => {
                                     isLeft ? 'right-0 text-right sm:left-auto sm:right-0' : 'left-0 sm:text-left'
                                   }`}
                                 >
-                                  <h2 className="text-xl font-bold drop-shadow-sm">{entry.place}</h2>
+                                  <h2 className="text-xl font-bold drop-shadow-sm">{entry.tripName}</h2>
                                   <div className="mt-1 flex items-center gap-1.5 text-sm text-white/90">
                                     <Calendar size={14} className="opacity-90" aria-hidden />
                                     {entry.date}
@@ -251,9 +253,9 @@ const Explore = () => {
                             )}
 
                             <div className="p-5 sm:p-6">
-                              {!entry.image && (
+                              {!placeImage && (
                                 <>
-                                  <h2 className="text-xl font-bold text-dark-900 dark:text-white">{entry.place}</h2>
+                                  <h2 className="text-xl font-bold text-dark-900 dark:text-white">{entry.tripName}</h2>
                                   <div className="mt-1 flex items-center gap-1.5 text-sm text-dark-500 dark:text-dark-400">
                                     <Calendar size={14} aria-hidden />
                                     {entry.date}
@@ -265,10 +267,28 @@ const Explore = () => {
                                 layout
                                 className={`mt-3 text-dark-600 dark:text-dark-300 ${
                                   expanded ? '' : 'line-clamp-3'
-                                } ${entry.image ? 'text-left' : ''}`}
+                                } ${placeImage ? 'text-left' : ''}`}
                               >
                                 <p className="text-sm leading-relaxed sm:text-[15px]">{entry.description}</p>
                               </motion.div>
+
+                              {expanded && entry.places.length > 1 && (
+                                <div className="mt-4 space-y-2 border-t border-gray-200 pt-4 dark:border-dark-600">
+                                  <p className="text-xs font-semibold uppercase tracking-wide text-dark-500 dark:text-dark-400">
+                                    Places visited
+                                  </p>
+                                  <div className="space-y-1">
+                                    {entry.places.map((place) => (
+                                      <div
+                                        key={place.place}
+                                        className="text-sm text-dark-600 dark:text-dark-300"
+                                      >
+                                        • {place.place}
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
 
                               <div className="mt-4 flex items-center gap-1 text-xs font-medium text-primary-600 dark:text-primary-400">
                                 <span>{expanded ? 'Show less' : 'More'}</span>

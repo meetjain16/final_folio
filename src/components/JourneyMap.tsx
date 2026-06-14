@@ -31,12 +31,30 @@ interface JourneyMapProps {
 }
 
 const JourneyMap = ({ entries }: JourneyMapProps) => {
-  const withCoords = entries.filter(
-    (e): e is JourneyEntry & { lat: number; lng: number } =>
-      typeof e.lat === 'number' && typeof e.lng === 'number'
-  )
+  // Flatten places from all trips and filter those with coordinates
+  const placesWithCoords: Array<{
+    place: string
+    description: string
+    date: string
+    lat: number
+    lng: number
+  }> = []
 
-  if (withCoords.length === 0) {
+  entries.forEach((entry) => {
+    entry.places.forEach((place) => {
+      if (typeof place.lat === 'number' && typeof place.lng === 'number') {
+        placesWithCoords.push({
+          place: place.place,
+          description: place.description,
+          date: entry.date,
+          lat: place.lat,
+          lng: place.lng,
+        })
+      }
+    })
+  })
+
+  if (placesWithCoords.length === 0) {
     return (
       <div className="flex h-[min(420px,70vh)] w-full items-center justify-center rounded-2xl border border-gray-200 bg-gray-50 text-sm text-dark-600 dark:border-dark-600 dark:bg-dark-800 dark:text-dark-300">
         Add latitude and longitude to your journey entries to see them on the map.
@@ -44,14 +62,14 @@ const JourneyMap = ({ entries }: JourneyMapProps) => {
     )
   }
 
-  const avgLat = withCoords.reduce((s, e) => s + e.lat, 0) / withCoords.length
-  const avgLng = withCoords.reduce((s, e) => s + e.lng, 0) / withCoords.length
+  const avgLat = placesWithCoords.reduce((s, e) => s + e.lat, 0) / placesWithCoords.length
+  const avgLng = placesWithCoords.reduce((s, e) => s + e.lng, 0) / placesWithCoords.length
 
   return (
     <div className="h-[min(420px,70vh)] w-full overflow-hidden rounded-2xl border border-gray-200 dark:border-dark-600">
       <MapContainer
         center={[avgLat, avgLng]}
-        zoom={withCoords.length === 1 ? 8 : 5}
+        zoom={placesWithCoords.length === 1 ? 8 : 5}
         className="h-full w-full z-0"
         scrollWheelZoom
       >
@@ -60,13 +78,13 @@ const JourneyMap = ({ entries }: JourneyMapProps) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {withCoords.map((e) => (
-          <Marker key={`${e.place}-${e.date}`} position={[e.lat, e.lng]}>
+        {placesWithCoords.map((place) => (
+          <Marker key={`${place.place}-${place.date}`} position={[place.lat, place.lng]}>
             <Popup>
               <div className="text-dark-900">
-                <strong>{e.place}</strong>
-                <div className="text-xs text-dark-600">{e.date}</div>
-                <p className="mt-1 max-w-[200px] text-xs">{e.description}</p>
+                <strong>{place.place}</strong>
+                <div className="text-xs text-dark-600">{place.date}</div>
+                <p className="mt-1 max-w-[200px] text-xs">{place.description}</p>
               </div>
             </Popup>
           </Marker>

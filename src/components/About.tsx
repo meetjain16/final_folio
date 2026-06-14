@@ -46,7 +46,7 @@ const About = () => {
           <div className="section-kicker">About</div>
           <h2 className="section-title">About Me</h2>
           <p className="section-copy max-w-2xl mx-auto">
-            Get to know me better - my journey, experience, and what drives me to create amazing digital experiences.
+            I specialize in building autonomous AI agents and multi-agent systems that solve complex problems through intelligent decision-making and adaptive reasoning.
           </p>
         </motion.div>
 
@@ -62,19 +62,19 @@ const About = () => {
             <h3 className="mb-6 text-2xl font-display font-semibold">Who I Am</h3>
             <div className="space-y-6 text-dark-600 dark:text-dark-300">
               <p className="leading-relaxed">
-                I'm a B.E. student in Computer Science and Data Science with a strong passion for technology 
-                and a keen interest in Web and App Development. I am meticulous and detail-oriented with 
-                excellent observational, organizational, and communication skills.
+                I'm a software developer with expertise in autonomous AI agents, LLM orchestration, and multi-agent systems. 
+                I build intelligent agents using Python, FastAPI, LangChain, and other cutting-edge frameworks. 
+                My focus is on creating self-directed systems that leverage large language models to solve complex problems.
               </p>
               <p className="leading-relaxed">
-                I'm willing to take on any task to help the team with a hardworking and resourceful approach. 
-                My experience spans across multiple internships where I've contributed to real-world projects 
-                and helped startups achieve their goals.
+                I specialize in tool integration, prompt engineering, agent workflows, and system design for autonomous agents. 
+                My approach combines deep technical knowledge with practical problem-solving to create agents that are 
+                both powerful and reliable. I'm passionate about the intersection of AI and software engineering.
               </p>
               <p className="leading-relaxed">
-                Beyond technical skills, I'm actively involved in leadership roles, serving as Director of 
-                Curation and Strategies for Institution's Innovation Council (IIC) at BMSCE, and coordinating 
-                multiple events for college fests.
+                I'm committed to advancing the field of autonomous agents through continuous learning, experimentation, 
+                and contributing to open-source projects. I believe AI agents will be fundamental to the future of software, 
+                and I'm excited to be building that future.
               </p>
             </div>
 

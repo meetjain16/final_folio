@@ -32,33 +32,33 @@ const Skills = () => {
       title: 'Web Development',
       icon: <Database className="text-green-500" size={24} />,
       skills: [
-        { name: 'MERN Stack', level: 88, color: '#61DAFB' },
-        { name: 'HTML/CSS', level: 92, color: '#E34F26' },
-        { name: 'React', level: 85, color: '#61DAFB' },
-        { name: 'Node.js', level: 80, color: '#339933' },
-        { name: 'MongoDB', level: 75, color: '#47A248' },
-        { name: 'Express.js', level: 78, color: '#000000' },
+        { name: 'LangChain', level: 88, color: '#0EA5E9' },
+        { name: 'FastAPI', level: 90, color: '#009688' },
+        { name: 'OpenAI API', level: 85, color: '#00D084' },
+        { name: 'Anthropic Claude', level: 80, color: '#5A5A5A' },
+        { name: 'Agent Orchestration', level: 82, color: '#FF6B6B' },
+        { name: 'Tool Integration', level: 85, color: '#FFD700' },
       ]
     },
     {
       title: 'Mobile Development',
       icon: <Palette className="text-purple-500" size={24} />,
       skills: [
-        { name: 'Flutter', level: 85, color: '#02569B' },
-        { name: 'Kotlin', level: 75, color: '#7F52FF' },
-        { name: 'Mobile UI/UX', level: 80, color: '#6366F1' },
-        { name: 'Cross-platform', level: 82, color: '#FF6B6B' },
+        { name: 'Prompt Engineering', level: 88, color: '#9333EA' },
+        { name: 'Multi-Agent Systems', level: 85, color: '#06B6D4' },
+        { name: 'Retrieval Augmented Generation', level: 82, color: '#F59E0B' },
+        { name: 'Agent Memory Management', level: 80, color: '#8B5CF6' },
       ]
     }
   ]
 
   const ideSkills = [
     { name: 'VS Code', level: 95, color: '#007ACC' },
-    { name: 'Jupyter Notebook', level: 85, color: '#F37626' },
-    { name: 'Google Colab', level: 80, color: '#F9AB00' },
-    { name: 'IntelliJ IDEA', level: 75, color: '#000000' },
-    { name: 'FlutLab', level: 70, color: '#02569B' },
-    { name: 'NetBeans', level: 65, color: '#1B6AC6' },
+    { name: 'Jupyter Notebook', level: 90, color: '#F37626' },
+    { name: 'LangChain Studio', level: 85, color: '#0EA5E9' },
+    { name: 'Docker', level: 80, color: '#2496ED' },
+    { name: 'Git/GitHub', level: 90, color: '#181717' },
+    { name: 'Postman', level: 85, color: '#FF6C37' },
   ]
 
   const ideRadarPathD =
@@ -91,7 +91,7 @@ const Skills = () => {
           <div className="section-kicker">Skills</div>
           <h2 className="section-title">Skills & Expertise</h2>
           <p className="section-copy max-w-2xl mx-auto">
-            A comprehensive overview of my technical skills and expertise across different domains.
+            Expertise in autonomous AI agents, LLM orchestration, and building intelligent systems with cutting-edge frameworks.
           </p>
         </motion.div>
 

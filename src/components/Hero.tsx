@@ -52,7 +52,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="max-w-3xl text-5xl font-display font-semibold leading-[0.95] text-dark-900 dark:text-white sm:text-6xl lg:text-7xl"
             >
-              Meet Jain, a modern <span className="gradient-text">product-minded developer</span>
+              Meet Jain, building <span className="gradient-text">autonomous AI agents</span>
             </motion.h1>
 
             <motion.p
@@ -61,7 +61,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-6 max-w-2xl text-lg leading-8 text-dark-600 dark:text-dark-300"
             >
-              I’m a B.E. Computer Science and Data Science student focused on web and app development. I build scalable, user-centered interfaces with a strong eye for detail, and I’m currently working as a Software Developer Intern at IndiaMART.
+              I'm a software developer specializing in autonomous AI agents and multi-agent systems. I build intelligent, self-directed agents that solve complex problems through LLM orchestration, tool integration, and adaptive reasoning. Proficient in Python and modern frameworks like FastAPI, LangChain, and OpenAI APIs.
             </motion.p>
 
             <motion.div
@@ -88,7 +88,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-10 flex flex-wrap gap-3"
             >
-              {['React', 'MERN Stack', 'Flutter', 'UI Systems', 'AI/ML'].map((item) => (
+              {['LLM Agents', 'Python', 'FastAPI', 'LangChain', 'Multi-Agent Systems'].map((item) => (
                 <span
                   key={item}
                   className="rounded-full border border-white/70 bg-white/75 px-4 py-2 text-sm font-medium text-dark-700 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-dark-800/60 dark:text-dark-200"

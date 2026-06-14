@@ -1,98 +1,259 @@
 [
+
+
+
+  
+ 
   {
-    "place": "Ladakh",
-    "date": "July 2024",
-    "description": "High-altitude desert landscapes, crystal-clear Pangong Lake, and quiet monasteries — a trip that felt like another planet.",
-    "image": "https://images.unsplash.com/photo-1597074869293-ffc0777f5553?w=800&q=80",
-    "lat": 34.1526,
-    "lng": 77.5771
-  },
-  {
-    "place": "Manali",
-    "date": "June 2023",
-    "description": "First solo trip into the mountains. Misty mornings, pine forests, and the simple joy of slowing down.",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80",
-    "lat": 32.2396,
-    "lng": 77.1887
-  },
-  {
-    "place": "Jaipur",
-    "date": "March 2023",
-    "description": "Pink city architecture, street food, and wandering through historic forts with friends.",
-    "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=80",
-    "lat": 26.9124,
-    "lng": 75.7873
-  },
-  {
-    "place": "Goa",
-    "date": "December 2022",
-    "description": "Sunset walks on the beach, coastal roads, and the relaxed rhythm of the Konkan coast.",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
-    "lat": 15.2993,
-    "lng": 74.124
-  },
-  {
-    "place": "Rishikesh",
-    "date": "May 2022",
-    "description": "Ganga ghats, yoga mornings, and the sound of the river — a reset before a busy semester.",
-    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
-    "lat": 30.0869,
-    "lng": 78.2676
-  },
-  {
-    "place": "Udaipur",
+    "tripId": 6,
+    "tripName": "Udaipur Lake Paradise",
     "date": "February 2022",
     "description": "Lake Pichola reflections, narrow old-city lanes, and rooftop views over white marble palaces.",
-    "image": "https://images.unsplash.com/photo-1609948544960-7853009d5b08?w=800&q=80",
-    "lat": 24.5854,
-    "lng": 73.7125
-  },
-   {
-    "place": "Ladakh",
-    "date": "July 2024",
-    "description": "High-altitude desert landscapes, crystal-clear Pangong Lake, and quiet monasteries — a trip that felt like another planet.",
-    "image": "https://images.unsplash.com/photo-1597074869293-ffc0777f5553?w=800&q=80",
-    "lat": 34.1526,
-    "lng": 77.5771
+    "places": [
+      {
+        "place": "Udaipur",
+        "description": "Lake Pichola reflections, narrow old-city lanes, and rooftop views over white marble palaces.",
+        "image": "https://images.unsplash.com/photo-1609948544960-7853009d5b08?w=800&q=80",
+        "lat": 24.5854,
+        "lng": 73.7125
+      }
+    ]
   },
   {
-    "place": "Manali",
-    "date": "June 2023",
-    "description": "First solo trip into the mountains. Misty mornings, pine forests, and the simple joy of slowing down.",
-    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80",
-    "lat": 32.2396,
-    "lng": 77.1887
+    "tripId": 7,
+    "tripName": "Tirupati Sacred Journey",
+    "date": "July 2022",
+    "description": "Sacred temple town nestled in the hills, known for its spiritual energy and breathtaking temple architecture.",
+    "places": [
+      {
+        "place": "Tirupati",
+        "description": "Sacred temple town nestled in the hills, known for its spiritual energy.",
+        "image": "https://images.unsplash.com/photo-1583391733981-8499f1d16d36?w=800&q=80",
+        "lat": 13.6288,
+        "lng": 79.4192
+      }
+    ]
   },
   {
-    "place": "Jaipur",
-    "date": "March 2023",
-    "description": "Pink city architecture, street food, and wandering through historic forts with friends.",
-    "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=80",
-    "lat": 26.9124,
-    "lng": 75.7873
+    "tripId": 8,
+    "tripName": "Nilgiris Mountain Loop",
+    "date": "August 2022",
+    "description": "Misty hills, tea gardens, winding mountain roads, and cool weather in the heart of the Nilgiris.",
+    "places": [
+      {
+        "place": "Ooty",
+        "description": "Misty hills, tea gardens, winding mountain roads, and cool weather in the Nilgiris.",
+        "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+        "lat": 11.4064,
+        "lng": 76.6932
+      },
+      {
+        "place": "Coonoor",
+        "description": "Scenic hill station with cascading waterfalls, tea plantations, and breathtaking mountain views.",
+        "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+        "lat": 11.3573,
+        "lng": 76.8011
+      }
+    ]
   },
   {
-    "place": "Goa",
+    "tripId": 9,
+    "tripName": "Chikmagalur Coffee Country",
+    "date": "September 2022",
+    "description": "Rolling coffee plantations, lush green valleys, and scenic trekking trails through the Western Ghats.",
+    "places": [
+      {
+        "place": "Chikmagalur",
+        "description": "Rolling coffee plantations, lush green valleys, and scenic trekking trails.",
+        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80",
+        "lat": 13.3153,
+        "lng": 75.7754
+      }
+    ]
+  },
+  {
+    "tripId": 10,
+    "tripName": "Coorg Highland Adventure",
+    "date": "October 2022",
+    "description": "Fog-covered hills, aromatic coffee estates, waterfalls, and peaceful countryside landscapes.",
+    "places": [
+      {
+        "place": "Coorg",
+        "description": "Fog-covered hills, aromatic coffee estates, waterfalls, and peaceful countryside.",
+        "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+        "lat": 12.3375,
+        "lng": 75.8069
+      }
+    ]
+  },
+  {
+    "tripId": 11,
+    "tripName": "Mysuru Palace Royalty",
+    "date": "November 2022",
+    "description": "Historic palace city with magnificent Mysuru Palace, vibrant markets, and cultural heritage.",
+    "places": [
+      {
+        "place": "Mysuru",
+        "description": "Historic palace city with the iconic Mysuru Palace, silk markets, and cultural attractions.",
+        "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&q=80",
+        "lat": 12.2958,
+        "lng": 76.6394
+      }
+    ]
+  },
+  {
+    "tripId": 13,
+    "tripName": "Karnataka Coast Journey",
+    "date": "June 2022",
+    "description": "Coastal exploration of Karnataka with sacred temples and pristine beaches.",
+    "places": [
+      {
+        "place": "Udupi",
+        "description": "Ancient temples, serene beaches, delicious South Indian cuisine.",
+        "image": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80",
+        "lat": 13.3409,
+        "lng": 74.7421
+      },
+      {
+        "place": "Murdeshwar",
+        "description": "Towering temple by the sea with stunning coastal cliffs and pristine beaches.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+        "lat": 14.0972,
+        "lng": 74.4640
+      }
+    ]
+  },
+  {
+    "tripId": 12,
+    "tripName": "Kerala Southern Coast",
     "date": "December 2022",
-    "description": "Sunset walks on the beach, coastal roads, and the relaxed rhythm of the Konkan coast.",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
-    "lat": 15.2993,
-    "lng": 74.124
+    "description": "Scenic coastal tour through Kerala's most iconic destinations.",
+    "places": [
+      {
+        "place": "Varkala",
+        "description": "Dramatic cliffs overlooking the Arabian Sea, golden beaches, and spectacular sunset views.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+        "lat": 8.7379,
+        "lng": 76.7163
+      },
+      {
+        "place": "Thiruvananthapuram",
+        "description": "Capital city with golden beaches, historic palaces, and vibrant cultural heritage.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+        "lat": 8.5241,
+        "lng": 76.9366
+      },
+      {
+        "place": "Kanyakumari",
+        "description": "Where three seas meet, known for stunning sunrise/sunset views and spiritual significance.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+        "lat": 8.0883,
+        "lng": 77.5385
+      }
+    ]
   },
   {
-    "place": "Rishikesh",
-    "date": "May 2022",
-    "description": "Ganga ghats, yoga mornings, and the sound of the river — a reset before a busy semester.",
-    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
-    "lat": 30.0869,
-    "lng": 78.2676
+    "tripId": 14,
+    "tripName": "Kerala Backwaters Explorer",
+    "date": "May 2023",
+    "description": "Journey through Kerala's enchanting waterways and historic harbor cities.",
+    "places": [
+      {
+        "place": "Kochi",
+        "description": "Historic harbor city featuring Chinese fishing nets, colonial architecture, and vibrant culture.",
+        "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80",
+        "lat": 9.9312,
+        "lng": 76.2673
+      },
+      {
+        "place": "Allepey",
+        "description": "Venice of the East with serene backwaters, houseboat journeys, and lush palm forests.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+        "lat": 9.4867,
+        "lng": 76.3419
+      }
+    ]
   },
   {
-    "place": "Udaipur",
-    "date": "February 2022",
-    "description": "Lake Pichola reflections, narrow old-city lanes, and rooftop views over white marble palaces.",
-    "image": "https://images.unsplash.com/photo-1609948544960-7853009d5b08?w=800&q=80",
-    "lat": 24.5854,
-    "lng": 73.7125
+    "tripId": 15,
+    "tripName": "Tamil Nadu Temple Trail",
+    "date": "March 2023",
+    "description": "Sacred temples and spiritual heritage across Tamil Nadu's holy sites.",
+    "places": [
+      {
+        "place": "Madurai",
+        "description": "Ancient city known for the magnificent Meenakshi Temple and colorful markets.",
+        "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80",
+        "lat": 9.9252,
+        "lng": 78.1198
+      },
+      {
+        "place": "Rameswaram",
+        "description": "Sacred temples, endless sea views, the iconic Pamban Bridge, and rich spiritual heritage.",
+        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
+        "lat": 9.2881,
+        "lng": 79.3174
+      }
+    ]
+  },
+  {
+    "tripId": 16,
+    "tripName": "Pondicherry Colonial Charm",
+    "date": "January 2023",
+    "description": "French colonial streets, colorful cafés, seaside promenades, and a unique cultural blend.",
+    "places": [
+      {
+        "place": "Pondicherry",
+        "description": "French colonial streets, colorful cafés, seaside promenades, and unique cultural blend.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+        "lat": 11.9416,
+        "lng": 79.8083
+      }
+    ]
+  },
+  {
+    "tripId": 17,
+    "tripName": "Shravanabelagola Heritage",
+    "date": "June 2023",
+    "description": "Home to the towering Gomateshwara statue, granite hills, and centuries-old Jain heritage.",
+    "places": [
+      {
+        "place": "Shravanabelagola",
+        "description": "Home to the towering Gomateshwara statue, granite hills, and centuries-old Jain heritage.",
+        "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80",
+        "lat": 12.8574,
+        "lng": 76.4889
+      }
+    ]
+  },
+  {
+    "tripId": 18,
+    "tripName": "Bangalore Tech City",
+    "date": "September 2023",
+    "description": "India's Silicon Valley with vibrant IT parks, gardens, breweries, and a thriving food scene.",
+    "places": [
+      {
+        "place": "Bangalore",
+        "description": "India's Silicon Valley with lush gardens, vibrant nightlife, tech parks, and cosmopolitan culture.",
+        "image": "https://images.unsplash.com/photo-1489493072403-541fa5d5a3c0?w=800&q=80",
+        "lat": 12.9716,
+        "lng": 77.5946
+      }
+    ]
+  },
+  {
+    "tripId": 19,
+    "tripName": "Delhi Capital Journey",
+    "date": "October 2026",
+    "description": "India's historic capital blending ancient monuments, bustling markets, and modern architecture.",
+    "places": [
+      {
+        "place": "Delhi",
+        "description": "India's capital city with ancient monuments, heritage sites, vibrant bazaars, and rich history.",
+        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+        "lat": 28.7041,
+        "lng": 77.1025
+      }
+    ]
   }
 ]

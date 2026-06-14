@@ -27,60 +27,60 @@ const Projects = () => {
       technologies: ['MERN Stack', 'AI APIs', 'React', 'Node.js', 'MongoDB'],
       category: 'fullstack',
       liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example',
+      githubUrl: 'https://github.com/meetjain16/autonomous-research-agent',
       featured: true
     },
     {
       id: 2,
       title: 'AI ChatBot',
-      description: 'An intelligent chatbot application that provides conversational AI capabilities. Features natural language processing and real-time responses.',
-      image: 'https://images.unsplash.com/photo-1676299251956-415922cff6f0?w=500&h=300&fit=crop',
-      technologies: ['React', 'Node.js', 'AI/ML', 'WebSocket', 'MongoDB'],
-      category: 'fullstack',
+      description: 'Multi-agent system for autonomous research and data collection. Agents automatically gather information, analyze findings, and generate comprehensive reports using web search and document retrieval.',
+      image: 'https://images.unsplash.com/photo-1655720828018-eed62d98936d?w=500&h=300&fit=crop',
+      technologies: ['LangChain', 'Python', 'FastAPI', 'OpenAI API', 'LLM Agents'],
+      category: 'agents',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
       featured: true
     },
     {
       id: 3,
-      title: 'SereneStyles - Salon Website',
-      description: 'A comprehensive salon management website with booking system, service catalog, and admin dashboard. Modern UI/UX with responsive design.',
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=300&fit=crop',
-      technologies: ['MERN Stack', 'React', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-      category: 'fullstack',
+      description: 'Autonomous task automation agent that manages scheduling, email responses, and workflow orchestration. Uses intelligent decision-making to prioritize tasks and handle complex business logic.',
+        title: 'Autonomous Task Automation',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop',
+      technologies: ['LangChain', 'FastAPI', 'Celery', 'PostgreSQL', 'Claude API'],
+      category: 'agents',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
       featured: false
     },
     {
       id: 4,
-      title: 'Dynamic Pricing ML Model',
-      description: 'Machine learning model to predict taxi fare based on various parameters. Built using Python and trained on Kaggle dataset with multiple features.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
-      technologies: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn', 'Jupyter'],
-      category: 'ml',
+      description: 'Intelligent code analysis and debugging agent. Uses AST parsing and LLM reasoning to identify bugs, suggest fixes, and explain issues in real-time.',
+        title: 'Code Analysis Agent',
+      image: 'https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500&h=300&fit=crop',
+      technologies: ['LangChain', 'Python', 'AST', 'OpenAI GPT-4', 'Reflex Framework'],
+      category: 'agents',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
       featured: false
     },
     {
       id: 5,
-      title: 'Snake and Ladder Game',
-      description: 'Classic snake and ladders game built with Python and Tkinter GUI. Features interactive gameplay, score tracking, and smooth animations.',
-      image: 'https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=500&h=300&fit=crop',
-      technologies: ['Python', 'Tkinter', 'Game Development', 'GUI'],
-      category: 'python',
+      title: 'Customer Support Agent',
+        description: 'Context-aware customer support agent. Manages support tickets, retrieves relevant documentation, and provides intelligent responses with conversation memory.',
+        image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65b?w=500&h=300&fit=crop',
+        technologies: ['LangChain', 'FAISS', 'Python', 'Anthropic Claude', 'RAG'],
+        category: 'agents',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
       featured: false
     },
     {
       id: 6,
-      title: 'Automated Backup System',
-      description: 'Bash script designed for automating backup processes using Cisco Packet Tracer. Implements efficient backup strategies and data management.',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop',
-      technologies: ['Bash Scripting', 'Cisco Packet Tracer', 'Automation', 'System Administration'],
-      category: 'automation',
+      description: 'Workflow orchestration agent that coordinates multiple sub-agents for complex business processes. Manages dependencies, error handling, and inter-agent communication.',
+        title: 'Workflow Orchestration Engine',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop',
+      technologies: ['LangChain', 'Python', 'FastAPI', 'Redis', 'OpenAI API'],
+      category: 'agents',
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/example',
       featured: false
@@ -89,9 +89,8 @@ const Projects = () => {
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'fullstack', label: 'Full Stack' },
+    { id: 'agents', label: 'AI Agents' },
     { id: 'ml', label: 'Machine Learning' },
-    { id: 'python', label: 'Python' },
     { id: 'automation', label: 'Automation' }
   ]
 
@@ -118,7 +117,7 @@ const Projects = () => {
           <div className="section-kicker">Projects</div>
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-copy max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience across different technologies.
+            Autonomous AI agent systems and intelligent automation projects built with cutting-edge LLM frameworks and multi-agent orchestration.
           </p>
         </motion.div>
 
